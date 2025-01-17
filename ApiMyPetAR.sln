@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMyPetAR", "ApiMyPetAR\ApiMyPetAR.csproj", "{F6DBBC5B-1998-4E08-9D8A-DF30928D45AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.MyPetAr.Models", "Api.MyPetAr.Models\Api.MyPetAr.Models.csproj", "{504F2EF9-8C7E-4635-9CEE-4B98F4BA9E1A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6DBBC5B-1998-4E08-9D8A-DF30928D45AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DBBC5B-1998-4E08-9D8A-DF30928D45AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DBBC5B-1998-4E08-9D8A-DF30928D45AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DBBC5B-1998-4E08-9D8A-DF30928D45AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{504F2EF9-8C7E-4635-9CEE-4B98F4BA9E1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{504F2EF9-8C7E-4635-9CEE-4B98F4BA9E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{504F2EF9-8C7E-4635-9CEE-4B98F4BA9E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{504F2EF9-8C7E-4635-9CEE-4B98F4BA9E1A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -2,6 +2,7 @@
 
 namespace Api.MyPetAr.Models.Identity;
 
+
 public class Identity
 {
     [Key] public int Id { get; set; }

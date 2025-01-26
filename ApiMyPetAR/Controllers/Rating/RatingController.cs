@@ -1,21 +1,29 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using ApiMyPet.Context;
+using ApiMyPet.Dto.Rating;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace ApiMyPetAR.Controllers.Rating;
 
 [ApiController]
 [Route("[controller]")]
-public class RatingController : ControllerBase
+public class RatingController(PetContext context) : ControllerBase
 {
     
-    [HttpPost(Name = "Auth")]
-    public IActionResult Auth([FromHeader] string sessionId)
+    [HttpPost(Name = "GetRating")]
+    public async Task<IActionResult> GetRating([FromHeader] string sessionId)
     {
-        return StatusCode(200);
-    }
-    
-    [HttpPost(Name = "Register")]
-    public IActionResult Register([FromHeader] string sessionId)
-    {
-        return StatusCode(200);
+        var rating = await context.Pets
+            .Include(x => x.Owner) 
+            .GroupBy(x => x.OwnerId) 
+            .Select(g => new RatingDto()
+            {
+                UserName = g.First().Owner!.Username ?? "Unknown", 
+                Level = g.Sum(x => x.Level)
+            })
+            .OrderByDescending(x => x.Level) 
+            .ToListAsync(); 
+
+        return Ok(rating);
     }
 }

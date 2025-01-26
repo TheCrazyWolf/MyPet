@@ -13,7 +13,7 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
 {
     private readonly PetContext _context = context;
 
-    [HttpPost("GetPets")]
+    [HttpGet("GetPets")]
     public async Task<IEnumerable<PetDto>> GetPets([FromHeader] string sessionId)
     {
         var currentAccount = await GetIdentityAsync(sessionId);

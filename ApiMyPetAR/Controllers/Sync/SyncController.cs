@@ -53,6 +53,6 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
         }
         
         await _context.SaveChangesAsync();
-        return StatusCode(200, GetPets(sessionId));
+        return StatusCode(200, await GetPets(sessionId));
     }
 }

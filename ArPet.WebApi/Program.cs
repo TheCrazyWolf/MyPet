@@ -1,20 +1,17 @@
 using ArPet.Storage;
 using Microsoft.EntityFrameworkCore;
+using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddOpenApi();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<PetContext>();
 
 var app = builder.Build();
-app.UseSwagger();
-app.UseSwaggerUI();
 
 using (var scope = app.Services.CreateScope())
 {
@@ -23,5 +20,8 @@ using (var scope = app.Services.CreateScope())
 }
 
 app.MapControllers();
+app.MapOpenApi();
+app.MapScalarApiReference();
+
 app.UseHttpsRedirection();
 app.Run();

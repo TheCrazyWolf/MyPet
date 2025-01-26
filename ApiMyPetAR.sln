@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.MyPetAr.Models", "Api.M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMyPet.Context", "ApiMyPet.Context\ApiMyPet.Context.csproj", "{0D8D5062-0F95-4561-B0DF-FE3156AC5A40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiMyPet.Dto", "ApiMyPet.Dto\ApiMyPet.Dto.csproj", "{62F29C87-12DA-43AF-A162-FEA77367FE19}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{0D8D5062-0F95-4561-B0DF-FE3156AC5A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D8D5062-0F95-4561-B0DF-FE3156AC5A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D8D5062-0F95-4561-B0DF-FE3156AC5A40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62F29C87-12DA-43AF-A162-FEA77367FE19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62F29C87-12DA-43AF-A162-FEA77367FE19}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62F29C87-12DA-43AF-A162-FEA77367FE19}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62F29C87-12DA-43AF-A162-FEA77367FE19}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

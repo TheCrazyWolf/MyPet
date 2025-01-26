@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace Api.MyPetAr.Models.Identity;
+namespace ArPet.Models.Identity;
 
 
 public class Identity

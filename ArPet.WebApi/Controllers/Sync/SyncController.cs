@@ -1,11 +1,11 @@
-﻿using Api.MyPetAr.Models;
-using ApiMyPet.Context;
-using ApiMyPet.Dto.Pets;
-using ApiMyPetAR.Controllers.Common;
+﻿using ArPet.Dto.Pets;
+using ArPet.Models;
+using ArPet.Storage;
+using ArPet.WebApi.Controllers.Common;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiMyPetAR.Controllers.Sync;
+namespace ArPet.WebApi.Controllers.Sync;
 
 [ApiController]
 [Route("[controller]")]

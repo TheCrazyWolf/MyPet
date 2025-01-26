@@ -1,8 +1,8 @@
-﻿using Api.MyPetAr.Models;
-using Api.MyPetAr.Models.Identity;
+﻿using ArPet.Models;
+using ArPet.Models.Identity;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiMyPet.Context;
+namespace ArPet.Storage;
 
 public class PetContext : DbContext
 {

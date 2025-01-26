@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ArPet.Models</AssemblyName>
+        <RootNamespace>ArPet.Models</RootNamespace>
+        <PackageId>ArPet.Models</PackageId>
+        <Authors>ArPet.Models</Authors>
+        <Company>ArPet.Models</Company>
+        <Product>ArPet.Models</Product>
+    </PropertyGroup>
+
+</Project>

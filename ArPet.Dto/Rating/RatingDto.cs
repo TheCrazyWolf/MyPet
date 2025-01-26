@@ -1,4 +1,4 @@
-﻿namespace ApiMyPet.Dto.Rating;
+﻿namespace ArPet.Dto.Rating;
 
 public class RatingDto
 {

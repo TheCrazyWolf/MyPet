@@ -4,6 +4,10 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <AssemblyName>ArPet.Storage</AssemblyName>
+        <RootNamespace>ArPet.Storage</RootNamespace>
+        <Company>ArPet.Storage</Company>
+        <Product>ArPet.Storage</Product>
     </PropertyGroup>
 
     <ItemGroup>
@@ -20,7 +24,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Api.MyPetAr.Models\Api.MyPetAr.Models.csproj" />
+      <ProjectReference Include="..\ArPet.Models\ArPet.Models.csproj" />
     </ItemGroup>
 
 </Project>

@@ -4,6 +4,10 @@
         <TargetFramework>net9.0</TargetFramework>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
+        <AssemblyName>ArPet.WebApi</AssemblyName>
+        <RootNamespace>ArPet.WebApi</RootNamespace>
+        <Company>ArPet.WebApi</Company>
+        <Product>ArPet.WebApi</Product>
     </PropertyGroup>
 
     <ItemGroup>
@@ -14,8 +18,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\ApiMyPet.Context\ApiMyPet.Context.csproj" />
-      <ProjectReference Include="..\ApiMyPet.Dto\ApiMyPet.Dto.csproj" />
+      <ProjectReference Include="..\ArPet.Storage\ArPet.Storage.csproj" />
+      <ProjectReference Include="..\ArPet.Dto\ArPet.Dto.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,10 +1,10 @@
-﻿using Api.MyPetAr.Models.Identity;
-using ApiMyPet.Context;
-using ApiMyPet.Dto.Auths;
+﻿using ArPet.Dto.Auths;
+using ArPet.Models.Identity;
+using ArPet.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiMyPetAR.Controllers.Auth;
+namespace ArPet.WebApi.Controllers.Auth;
 
 [ApiController]
 [Route("[controller]")]

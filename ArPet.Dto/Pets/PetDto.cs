@@ -1,4 +1,4 @@
-﻿namespace ApiMyPet.Dto.Pets;
+﻿namespace ArPet.Dto.Pets;
 
 public class PetDto
 {

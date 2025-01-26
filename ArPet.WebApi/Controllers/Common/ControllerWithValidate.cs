@@ -1,9 +1,9 @@
-﻿using Api.MyPetAr.Models.Identity;
-using ApiMyPet.Context;
+﻿using ArPet.Models.Identity;
+using ArPet.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiMyPetAR.Controllers.Common;
+namespace ArPet.WebApi.Controllers.Common;
 
 public class ControllerWithValidate(PetContext context) : ControllerBase
 {

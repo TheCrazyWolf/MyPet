@@ -1,4 +1,4 @@
-﻿namespace ApiMyPet.Dto.Auths;
+﻿namespace ArPet.Dto.Auths;
 
 public class AuthDto
 {

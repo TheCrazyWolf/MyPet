@@ -1,9 +1,9 @@
-﻿using ApiMyPet.Context;
-using ApiMyPet.Dto.Rating;
+﻿using ArPet.Dto.Rating;
+using ArPet.Storage;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace ApiMyPetAR.Controllers.Rating;
+namespace ArPet.WebApi.Controllers.Rating;
 
 [ApiController]
 [Route("[controller]")]

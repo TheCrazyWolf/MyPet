@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <AssemblyName>ArPet.Dto</AssemblyName>
+        <RootNamespace>ArPet.Dto</RootNamespace>
+        <PackageId>ArPet.Dto</PackageId>
+        <Authors>ArPet.Dto</Authors>
+        <Company>ArPet.Dto</Company>
+        <Product>ArPet.Dto</Product>
+    </PropertyGroup>
+
+</Project>

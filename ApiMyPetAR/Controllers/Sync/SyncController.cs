@@ -13,7 +13,7 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
 {
     private readonly PetContext _context = context;
 
-    [HttpPost(Name = "GetPets")]
+    [HttpPost("GetPets")]
     public async Task<IEnumerable<PetDto>> GetPets([FromHeader] string sessionId)
     {
         var currentAccount = await GetIdentityAsync(sessionId);
@@ -28,7 +28,7 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
         return petsByAcocunt;
     }
     
-    [HttpPost(Name = "Sync")]
+    [HttpPost("SyncPets")]
     public async Task<IActionResult> Sync([FromHeader] string sessionId, IList<PetDto> pets)
     {
         var currentAccount = await GetIdentityAsync(sessionId);

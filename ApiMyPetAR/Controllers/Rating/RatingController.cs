@@ -10,7 +10,7 @@ namespace ApiMyPetAR.Controllers.Rating;
 public class RatingController(PetContext context) : ControllerBase
 {
     
-    [HttpPost(Name = "GetRating")]
+    [HttpPost("GetRating")]
     public async Task<IActionResult> GetRating([FromHeader] string sessionId)
     {
         var rating = await context.Pets

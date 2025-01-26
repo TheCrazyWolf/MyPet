@@ -7,12 +7,11 @@ namespace ApiMyPetAR.Controllers.Common;
 
 public class ControllerWithValidate(PetContext context) : ControllerBase
 {
-    
-    public async Task<Identity?> GetIdentityAsync(string sessionId)
+    [NonAction]
+    protected async Task<Identity?> GetIdentityAsync(string sessionId)
     {
         return (await context.Sessions
-                .Include(x => x.Identity)
-                .FirstOrDefaultAsync(x => x.SessionId == sessionId))?.Identity;
+            .Include(x => x.Identity)
+            .FirstOrDefaultAsync(x => x.SessionId == sessionId))?.Identity;
     }
-
 }

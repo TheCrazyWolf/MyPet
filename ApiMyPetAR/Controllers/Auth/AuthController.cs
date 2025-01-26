@@ -10,7 +10,7 @@ namespace ApiMyPetAR.Controllers.Auth;
 [Route("[controller]")]
 public class AuthController(PetContext context) : ControllerBase
 {
-    [HttpPost(Name = "Auth")]
+    [HttpPost("Auth")]
     public async Task<IActionResult> Auth(AuthDto authDto)
     {
         var account =
@@ -28,7 +28,7 @@ public class AuthController(PetContext context) : ControllerBase
         return StatusCode(200, new SessionResult { SessionId = session.SessionId });
     }
 
-    [HttpPost(Name = "Register")]
+    [HttpPost("Register")]
     public async Task<IActionResult> Register(AuthDto authDto)
     {
         var account =

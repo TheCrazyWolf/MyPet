@@ -11,6 +11,8 @@ public class RatingController(PetContext context) : ControllerBase
 {
     
     [HttpPost("GetRating")]
+    [EndpointSummary("Рейтинг аккаунтов")]
+    [EndpointDescription("Возращается массив с данными UserName и суммарное кол-во уровня аккаунтов")]
     public async Task<IActionResult> GetRating([FromHeader] string sessionId)
     {
         var rating = await context.Pets

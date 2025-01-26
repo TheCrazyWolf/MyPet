@@ -14,6 +14,8 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
     private readonly PetContext _context = context;
 
     [HttpGet("GetPets")]
+    [EndpointSummary("Получение списка питмоцев ")]
+    [EndpointDescription("Возращается массив питомцев из аккаунта пользоваться")]
     public async Task<IEnumerable<PetDto>> GetPets([FromHeader] string sessionId)
     {
         var currentAccount = await GetIdentityAsync(sessionId);
@@ -29,6 +31,8 @@ public class SyncController(PetContext context) : ControllerWithValidate(context
     }
     
     [HttpPost("SyncPets")]
+    [EndpointSummary("Синхронизация данных аккаунта")]
+    [EndpointDescription("Отправка массивов питомца из аккаунта на сервер. Если ID равен 0, то будет присвоен новый ID и добавлен в аккаунт. В остальных случая, перезапись")]
     public async Task<IActionResult> Sync([FromHeader] string sessionId, IList<PetDto> pets)
     {
         var currentAccount = await GetIdentityAsync(sessionId);

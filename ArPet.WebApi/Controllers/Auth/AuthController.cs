@@ -11,6 +11,8 @@ namespace ArPet.WebApi.Controllers.Auth;
 public class AuthController(PetContext context) : ControllerBase
 {
     [HttpPost("Auth")]
+    [EndpointSummary("Авторизация")]
+    [EndpointDescription("Возращается SessiondId, которое необходимо добавить в заголовок авторизации sessionId")]
     public async Task<IActionResult> Auth(AuthDto authDto)
     {
         var account =
@@ -29,6 +31,8 @@ public class AuthController(PetContext context) : ControllerBase
     }
 
     [HttpPost("Register")]
+    [EndpointSummary("Регистрация")]
+    [EndpointDescription("Возращается статус код 200, если аккаунт успешно зарегистрирован")]
     public async Task<IActionResult> Register(AuthDto authDto)
     {
         var account =

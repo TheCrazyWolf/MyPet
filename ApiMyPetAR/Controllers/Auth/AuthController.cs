@@ -10,27 +10,30 @@ namespace ApiMyPetAR.Controllers.Auth;
 [Route("[controller]")]
 public class AuthController(PetContext context) : ControllerBase
 {
-    
     [HttpPost(Name = "Auth")]
     public async Task<IActionResult> Auth(AuthDto authDto)
     {
-        var account = await context.Identities.FirstOrDefaultAsync(x=> x.Password == authDto.Password && x.Username == authDto.Login);
+        var account =
+            await context.Identities.FirstOrDefaultAsync(x =>
+                x.Password == authDto.Password && x.Username == authDto.Login);
         if (account is null) return StatusCode(403, "Invalid login or password");
 
         var session = new Session()
         {
             UserId = account.Id
         };
-        
+
         context.Add(session);
         await context.SaveChangesAsync();
         return StatusCode(200, new SessionResult { SessionId = session.SessionId });
     }
-    
+
     [HttpPost(Name = "Register")]
     public async Task<IActionResult> Register(AuthDto authDto)
     {
-        var account = await context.Identities.FirstOrDefaultAsync(x=> x.Password == authDto.Password && x.Username == authDto.Login);
+        var account =
+            await context.Identities.FirstOrDefaultAsync(x =>
+                x.Password == authDto.Password && x.Username == authDto.Login);
         if (account is not null) return StatusCode(403, "This account already exists");
 
         var identity = new Identity()
